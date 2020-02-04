@@ -1,4 +1,12 @@
 # Radagast
-Hello, I store assignments for web development here
 
-:P
+Don't Read This...
+
+
+
+Oh wait, you already did...
+
+
+
+What a Dissapointment.
+
