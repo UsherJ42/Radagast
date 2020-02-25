@@ -1,0 +1,62 @@
+
+#background {
+    background-color: rgb(43, 41, 41);
+    margin: 0px;
+    padding: 10px;
+    height: 80vh;
+    width: 100vh;
+}
+section, table, tr {
+    border: 1px solid white;
+}
+td {
+    width: 50px;
+    height: 50px;
+    
+    background-color: rgb(201, 201, 201);
+    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 3px;
+    border: 1px solid white;
+}
+header {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    width: 100vh;
+    background-color: rgba(66, 66, 66, 1);
+    height: 30px;
+    margin: 0px;
+}
+#player{
+    width: 60px;
+    height: 60px;
+}
+#menu {
+    position: absolute;
+    top: 70px;
+    left:640px;
+    width: 305px;
+    height: 605px;
+    background-color: rgba(66, 66, 66, 1);
+}
+.menu {
+    font: black;
+}
+#healthbar {
+    position: relative;
+    top: 20px;
+    left:20px;
+    width: 260px;
+    height: 50px;
+    background-color: red;
+    border: 2px solid white;
+    z-index: 2;
+}
+#healthtext {
+    position: absolute;
+    top: 10;
+    left: 20;
+    font-size: 20;
+    font: bold;
+
+}
