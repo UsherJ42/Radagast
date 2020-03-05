@@ -58,5 +58,32 @@ header {
     left: 20;
     font-size: 20;
     font: bold;
-
+}
+#gp {
+    position: relative;
+    background-color: rgba(43, 41, 41, 1);
+    z-index:2;
+    left:20px;
+    width: 260px;
+    height:260px;
+    top: 40px;
+    border: 2px solid black;
+    font: white;
+}
+#gptext {
+    position: relative;
+    top: 10px;
+    left:10px;
+}
+#coin {
+    width: 50px;
+    height: 48px;
+}
+#button1 {
+    position: absolute;
+    top: 130px;
+    left: 60px;
+    width: 80px;
+    height: 80px;
+    z-index: 2;
 }
