@@ -6,143 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" shrink-to-fit="no">
         
         <title>World Builder</title>
+
+        
     </head>
     <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-    <header>Game</header>
+    <header>Build!</header>
     <div id="background">
     <div class="top">
 
     </div>
+    
     <table id="gameboard">
         <tr>
-            <td><img id="coin" src="Gp.png"/></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            
+            <td><img class="cell" id="one" src="forest96x.png"/></td>
+            <td><img class="cell" id="two" src="forest96x.png"/></td>
+            <td><img class="cell" id="three" src="forest96x.png"/></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><img class="cell" id="four" src="forest96x.png"/></td>
+            <td><img class="cell" id="five" src="forest96x.png"/></td>
+            <td><img class="cell" id="six" src="forest96x.png"/></td>
+
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><img class="cell" id="seven" src="forest96x.png"/></td>
+            <td><img class="cell" id="eight" src="forest96x.png"/></td>
+            <td><img class="cell" id="nine" src="forest96x.png"/></td>
         </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
+
         <div id="menu">
-                <div id="healthbar">
-                   <text class="menu" id="healthtext">
-                       <div id="health" style ="padding: 15px">HEALTH</div>
-                    </text>
-                </div>
-               
                 <div id="gp">
                     <text id="gptext" style ="color: yellow">Gold Pieces:</text>
                     
@@ -151,84 +46,53 @@
                 <script type="text/javascript">
                     $(document).ready(function() {
                         $('#button1').click(function() {
-                        alert('You Did a Thing!');
+                        onload();
                     });
                 });
                 </script>
-                <input type="button" id="button1" value="Add Gold"/>
+               <button id="button1" type="button" onclick="endturn()"">END TURN</button>
                     
         </div>
         
 
 
     </table>
-    <script type="text/javascript">
-        var objImage= null;
-        function init(){
-            objImage=document.getElementById("player");				
-            objImage.style.position='absolute';
-            objImage.style.left='20px';
-            objImage.style.top='70px';
-        }
-        function getKeyAndMove(e){				
-            var key_code=e.which||e.keyCode;
-            switch(key_code){
-                case 37: //left arrow key
-                    moveLeft();
-                    break;
-                case 38: //Up arrow key
-                    moveUp();
-                    break;
-                case 39: //right arrow key
-                    moveRight();
-                    break;
-                case 40: //down arrow key
-                    moveDown();
-                    break;						
-            }
-        }
-        function moveLeft(){
-            objImage.style.left=parseInt(objImage.style.left)-60 +'px'
-        }
-        function moveUp(){
-            objImage.style.top=parseInt(objImage.style.top)-60 +'px';
-        }
-        function moveRight(){
-            objImage.style.left=parseInt(objImage.style.left)+60 +'px';
-        }
-        function moveDown(){
-            objImage.style.top=parseInt(objImage.style.top)+60 +'px';
-        }
-        
-       
 
-        window.onload=init;
+    <script id="clickcheck" type="text/javascript">
+        document.addEventListener('click', function (event) {
+             if (event.target.closest('#one')) {
+                 alert("one!");
+             }
+             if (event.target.closest('#two')) {
+                 alert("two!");
+             }
+             if (event.target.closest('#three')) {
+                 alert("three!");
+             }
+             if (event.target.closest('#four')) {
+                 alert("four!");
+             }
+             if (event.target.closest('#five')) {
+                 alert("five!");
+             }
+             if (event.target.closest('#six')) {
+                 alert("six!");
+             }
+             if (event.target.closest('#seven')) {
+                 alert("seven!");
+             }
+             if (event.target.closest('#eight')) {
+                 alert("eight!");
+             }
+             if (event.target.closest('#nine')) {
+                 alert("nine!");
+             }
 
+        });
 
-
-
-    </script>
-</head>
-
-<body onkeydown='getKeyAndMove(event)'>
-    <img id="player" src="link.png"/>
-   
+     
+     </script>
 </body>
-
-</body>
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
 
 
 </html>

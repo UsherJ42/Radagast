@@ -3,26 +3,32 @@
     background-color: rgb(43, 41, 41);
     margin: 0px;
     padding: 10px;
-    height: 80vh;
-    width: 100vh;
+    height: 90vh;
+    width: 100% - 10px;
 }
 section, table, tr {
-    border: 1px solid white;
+    display: flex;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
 }
 td {
-    width: 50px;
-    height: 50px;
-    
-    background-color: rgb(201, 201, 201);
-    grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    padding: 3px;
-    border: 1px solid white;
+    display: flex;
+    height:200px;
+    width: 200px;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    border: 2px dotted;
 }
+td:hover {
+    cursor: pointer;
+    border-color: yellow;
+}
+
 header {
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     padding: 10px;
-    width: 100vh;
+    width: 100% - 10px;
     background-color: rgba(66, 66, 66, 1);
     height: 30px;
     margin: 0px;
@@ -41,23 +47,6 @@ header {
 }
 .menu {
     font: black;
-}
-#healthbar {
-    position: relative;
-    top: 20px;
-    left:20px;
-    width: 260px;
-    height: 50px;
-    background-color: red;
-    border: 2px solid white;
-    z-index: 2;
-}
-#healthtext {
-    position: absolute;
-    top: 10;
-    left: 20;
-    font-size: 20;
-    font: bold;
 }
 #gp {
     position: relative;
@@ -78,6 +67,11 @@ header {
 #coin {
     width: 50px;
     height: 48px;
+}
+.cell {
+    width: 200px;
+    height: 200px;
+
 }
 #button1 {
     position: absolute;
